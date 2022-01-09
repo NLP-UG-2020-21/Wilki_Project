@@ -14,25 +14,38 @@
             <div class="centered">Toxicity Detection Tool</div>
           </div>
         <hr>
-            <h2>What's toxicity?</h2>
-            <p>We live during the time of significant growth of the Internet and social media usage. It is undeniable that worldwide communication and creating complex community became crucial in our everyday live. 
-                <br>
-                People's usage of the internet includes posting and commenting someone's activity on different portals. Being online gives us opportunity to express our opinions anonymously, which causes in growing presence of hate speech. 
-                <br>
-                According to the website of a <a href='https://support.perspectiveapi.com/s/' target='_blank'>Perspective API</a> toxicity might be explained as: "a rude, disrespectful, or unreasonable comment that is likely to make you leave discussion."
-                </p>
-        <hr>
-            <h2>Why would you want to detect toxicity?</h2>
-            <p>Nowadays, websites try to put a lot of focus on supervising users' safety. Creators as well as whole communities have to face increasing amount of hate speech present in the comments. Therefore, moderating and monitoring these toxic comments is such a crucial issue. That type of content is often full of aggression, racism and other dangerous aspects which has damaging impact on the users' psyche health. 
-                On the other hand, this type of comments does not encourage users to take their part in different discussions.  
-                </p>
-        <hr>            
-            <h2>How does it work?</h2>
-            <p>Sample Text</p>
-        <hr>
-        <h2>Insert your text here:</h2>
-        <!--Box-->
-
+        <p>All you wanted to know about toxicity:</p>
+        <button class="collapsible">What's toxicity?</button>
+        <div class="content">
+          <p> Sample text </p>
+        </div>
+        <button class="collapsible">Why would you want to detect toxicity?</button>
+        <div class="content">
+          <p> Sample text </p>
+        </div>
+        <button class="collapsible">How does it work?</button>
+        <div class="content">
+          <p> Sample text </p>
+        </div>
+                <hr>
+                <h2>Insert your text here:</h2>
+                <!--Box-->
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+                    
+                    for (i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                          content.style.maxHeight = null;
+                        } else {
+                          content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                      });
+                    }
+                    </script>
         
     </body>
 </html>
