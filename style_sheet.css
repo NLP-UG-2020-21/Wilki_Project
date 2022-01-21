@@ -4,6 +4,7 @@
     position: relative;
     text-align: center;
     color: white;
+    display:flex;
   }
 
   /* Centered text */
@@ -14,6 +15,7 @@
     transform: translate(-50%, -50%);
     color: white;
     font-size: 70px;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
 
@@ -78,4 +80,13 @@
 .topnav a.active {
   background-color: #0027c2;
   color: white;
+}
+@media screen and (max-width:768px){
+  p{font-size:1.5rem;
+} 
+}
+
+@media screen  and (max-width:768px){
+  h2{font-size:2rem;
+  }
 }
