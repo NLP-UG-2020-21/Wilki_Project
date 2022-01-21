@@ -16,6 +16,29 @@
     font-size: 70px;
   }
 
+/* Ania */
+
+  h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color:teal;
+    margin-left: 10px;
+  }
+
+  h2:hover {
+    font-family: sans-serif;
+    font-size: 35px;
+  }
+
+  p {
+    font-family: sans-serif;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
 
  /* Collapsible - to te składane menu, które można rozwinąć przez plusa z prawej :) */
 
@@ -79,3 +102,4 @@
   background-color: #0027c2;
   color: white;
 }
+
