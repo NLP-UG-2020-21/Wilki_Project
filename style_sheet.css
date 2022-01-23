@@ -4,6 +4,7 @@
     position: relative;
     text-align: center;
     color: white;
+    display:flex;
   }
 
   /* Centered text */
@@ -14,6 +15,7 @@
     transform: translate(-50%, -50%);
     color: white;
     font-size: 70px;
+    font-family: 'Josefin Sans', sans-serif;
   }
 
 /* Ania */
@@ -49,7 +51,7 @@
  /* Collapsible - to te składane menu, które można rozwinąć przez plusa z prawej :) */
 
  .collapsible {
-  background-color: #777;
+  background-color: teal;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -61,7 +63,7 @@
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #339999;
 }
 
 .collapsible:after {
@@ -72,7 +74,7 @@
   margin-left: 5px;
 }
 
-.active:after {
+.collapsible.active:after {
   content: "\2212";
 }
 
@@ -86,7 +88,7 @@
  /* Navigation bar style */
  .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: teal;
 }
 
 .topnav a {
@@ -105,7 +107,19 @@
 
  /* Please change the shade of blue to a nicer one :) */
 .topnav a.active {
-  background-color: #0027c2;
+  background-color: #008080;
   color: white;
 }
+<<<<<<< HEAD
 
+=======
+@media screen and (max-width:768px){
+  p{font-size:1.5rem;
+} 
+}
+
+@media screen  and (max-width:768px){
+  h2{font-size:2rem;
+  }
+}
+>>>>>>> f508f3756c9e0322e34e9cecdc65b2dc25cf917a
