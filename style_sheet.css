@@ -81,6 +81,7 @@
   background-color: #0027c2;
   color: white;
 }
+
 @media screen and (max-width:768px){
   p{font-size:1.5rem;
 } 

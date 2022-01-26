@@ -48,8 +48,14 @@
           <p> Sample text </p>
         </div>
                 <hr>
-                <h2>Insert your text here:</h2>
                 <!--Box-->
+                <h2>Insert your text here:</h2>
+                <form action="/html/tags/html_form_tag_action.cfm" method="post">
+                  Insert your text here:<br />
+                  <textarea name="textbox" id="textbox">
+                  </textarea><br />
+                  <input type="submit" value="Submit" />
+                  </form>
                 <script>
                     var coll = document.getElementsByClassName("collapsible");
                     var i;
