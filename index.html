@@ -4,9 +4,9 @@
 
     <div class="topnav">
         <a class="active" href="#home">Toxicity Detection Tool</a>
-        <a href="#Product">Product</a>
-        <a href="#News">News</a>
-        <a href="#Testimonials">Testimonials</a>
+        <a href="./product">Product</a>
+        <a href="./news">News</a>
+        <a href="./testimonials">Testimonials</a>
         <a href="./about_us.html">About us</a>
       </div>
 
@@ -58,42 +58,36 @@
             <p>Nowadays, websites try to put a lot of focus on supervising users' safety. Creators as well as whole communities have to face increasing amount of hate speech present in the comments. Therefore, moderating and monitoring these toxic comments is such a crucial issue. That type of content is often full of aggression, racism and other dangerous aspects which has damaging impact on the users' psyche health. 
               On the other hand, this type of comments does not encourage users to take their part in different discussions.  
             </p>
-          </div>
-
-
-            <hr>            
-            <h2 class="collapsible"> How does it work
-              
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-                </svg>
-              </h2>
-              <div class="content">
-              <p>Sample Text</p>
-            </div>
-        <hr>
-        <h2>Insert your text here
-            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-chat-right-text-fill" viewBox="0 0 16 16">
-                <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z"/>
-              </svg>
-        </h2>
-          <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-            
-            for (i = 0; i < coll.length; i++) {
-              coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                  content.style.maxHeight = null;
-                } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
-                } 
-              });
-            }
-            </script>
+        </div>
+        <button class="collapsible">How does it work?</button>
+        <div class="content">
+          <p> Sample text </p>
+        </div>
+                <hr>
+                <!--Box-->
+                <h2>Insert your text here:</h2>
+                <form action="/html/tags/html_form_tag_action.cfm" method="post">
+                  Insert your text here:<br />
+                  <textarea name="textbox" id="textbox">
+                  </textarea><br />
+                  <input type="submit" value="Submit" />
+                  </form>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+                    
+                    for (i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                          content.style.maxHeight = null;
+                        } else {
+                          content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                      });
+                    }
+                    </script>
         
     </body>
 </html>
