@@ -10,6 +10,27 @@
 .main_title {
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
+
+.reference1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.reference1:hover{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(5, 83, 83);
+  font-size: 35px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 .chosen_one {
   text-shadow: 0 0 6px rgb(0, 0, 0);
 }
@@ -125,6 +146,7 @@ h1 {
   text-decoration: none;
   font-size: 17px;
 }
+
 
 .topnav a:hover {
   background-color: #d5e4e4;
