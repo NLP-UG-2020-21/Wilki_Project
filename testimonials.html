@@ -2,11 +2,28 @@
 <html>
 
     <div class="topnav">
+
+        <a class = "chosen_one" href="./index.html">Toxicity Detection Tool</a>
+        <a class = "chosen_one" href="./product.html">Product</a>
+        <a class = "chosen_one" href="./news.html">News</a>
+        <a class = "chosen_one" href="./testimonials.html">Testimonials</a>
+        <a class = "chosen_one" href="./about_us.html">About us</a>
+        <!-- DARK MODE -->
+        <button id='darkModeButton' class='dark darkbutton chosen_one' onclick='darkMode()'>Dark mode</button>
+        <script>
+          function darkMode() {
+            var element = document.body;
+            element.classList.toggle('dark-mode');
+          }
+                    
+              </script>
+
         <a href="./index.html">Toxicity Detection Tool</a>
         <a href="./product.html">Product</a>
         <a href="./news.html">News</a>
         <a class = "chosen_one" href="./testimonials.html">Testimonials</a>
         <a href="./about_us.html">About us</a>
+
       </div>
       <div>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><b>↑</b></button>
@@ -31,5 +48,6 @@
         <hr>
         <h1 id="testimonials_info">Bla bla bla</h1>
         <script src="java.js"></script>
+
     </body>
 </html>
