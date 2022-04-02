@@ -1,5 +1,3 @@
-/* Container holding the image and the text */
-
 /*Poniżej collapsable z indexu*/
 #mainForm { 
   display: block;
@@ -32,11 +30,15 @@
 }
 /* Powyżej jest guzik do scroll up */
 
+
+
+
 /* Poniżej są obrazki z tekstem do about me */
 
 .cool_photo {
   position: relative;
   width: 70%;
+
 }
 
 .profile_photo {
@@ -92,9 +94,8 @@ div.pic3 {
 div.pic4 {
   float: right;
 }
-
-
 /* Powyżej są obrazki z tekstem do about me */
+
 
 #textbox {
   width: 130px;
@@ -113,103 +114,6 @@ div.pic4 {
 .main_title {
   text-shadow: 0 0 10px rgb(0, 0, 0);
 }
-
-
-/*Poniżej collapsable z indexu*/
-#mainForm { 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  
-}
-
-/* Poniżej jest guzik do scroll up */
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 10px; /* Place the button at the bottom of the page */
-  right: 10px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgb(5, 83, 83); /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 20px; /* Rounded corners */
-  font-size: 20px; /* Increase font size */
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-}
-/* Powyżej jest guzik do scroll up */
-
-/* Poniżej są obrazki z tekstem do about me */
-.cool_photo {
-  position: relative;
-  width: 30%;
-}
-
-.profile_photo {
-  border-radius: 50%;
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  background-color: rgb(5, 83, 83);
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
-}
-
-.cool_photo:hover .overlay {
-  border-radius: 50%;
-  opacity: 0.9;
-  bottom: 0;
-  height: 100%;
-}
-
-.text {
-  white-space: nowrap; 
-  color: white;
-  font-size: 15px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-/* Powyżej są obrazki z tekstem do about me */
-
-#textbox {
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Ficon%2Fwrite%2F176713&psig=AOvVaw1kFp3rC7qn74HLMUrngSrL&ust=1647290139997000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjdjJX4w_YCFQAAAAAdAAAAABAF');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  transition: width 0.4s ease-in-out;
-}
-
-.main_title {
-  text-shadow: 0 0 10px rgb(0, 0, 0);
-}
-
 
 .reference1{
   position: absolute;
@@ -426,6 +330,8 @@ body {
 
 .dark-mode #textbox {
   background-color: black;
+  color: white;
+  text-align: justify;
 }
 
 .dark-mode .dark {
@@ -436,4 +342,8 @@ body {
 
 /* DARK MODE koniec */
 
-
+/*textbox*/
+#textbox {
+  width: 100%;
+  height: 50vh;
+}
