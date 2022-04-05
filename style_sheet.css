@@ -316,7 +316,6 @@ h1 {
 
 
 body {
-  padding: 25px;
   background-color: white;
   color: black;
   font-size: 25px;
@@ -344,6 +343,6 @@ body {
 
 /*textbox*/
 #textbox {
-  width: 100%;
+  width: 90%;
   height: 50vh;
 }
