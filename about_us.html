@@ -39,13 +39,12 @@
         <div class="main_title">
             <img src="https://github.com/NLP-UG-2020-21/Wilki_Project/blob/main/Backgrounds%20and%20pictures/about_us.jpg?raw=true" alt="technology"  style="width:100%;">
             <div class="centered">About us</div>
-            <a class ="reference1" href="#profile_info"><br><br><br>Get to know us!</a>
+            <a class ="reference1" href="#KasiaA"><br><br><br>Get to know us!</a>
         </div>
-        <h2 id = "profile_info">Bla bla</h2>
 
 
         <div class="pic1">
-          <h1 class="KasiaA">Kasia A.</h1>
+          <h1 id="KasiaA">Kasia A.</h1>
             <center><div class="cool_photo">
               <img class="profile_photo" src="https://github.com/NLP-UG-2020-21/Wilki_Project/blob/main/Profile%20photos/ania.jpg?raw=true" alt="profile_photo"/>
               <div class="overlay">
@@ -104,7 +103,18 @@
 
         </div>
         <script src="java.js"></script>   
-    
+         <!--Loading screen-->   
+         <div class='spinner-wrapper'>
+          <div class="spinner"></div>
+        </div>
+        <script>
+          let spinnerWrapper = document.querySelector('.spinner-wrapper');
+      
+          window.addEventListener('load', function () {
+              // spinnerWrapper.style.display = 'none';
+              spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+          });
+      </script>
 
     </body>
 </html>

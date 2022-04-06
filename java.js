@@ -35,4 +35,6 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
-//Nie wiem co to//
+
+
+

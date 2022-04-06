@@ -40,6 +40,17 @@
         <hr>
         <h1 id="product_info">Bla bla bla</h1>
         <script src="java.js"></script>
-
+     <!--Loading screen-->   
+     <div class='spinner-wrapper'>
+      <div class="spinner"></div>
+    </div>
+    <script>
+      let spinnerWrapper = document.querySelector('.spinner-wrapper');
+  
+      window.addEventListener('load', function () {
+          // spinnerWrapper.style.display = 'none';
+          spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+  </script>
     </body>
 </html>
