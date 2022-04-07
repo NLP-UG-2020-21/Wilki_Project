@@ -19,11 +19,6 @@
                         
     </script>
 
-    <a href="./index.html">Toxicity Detection Tool</a>
-    <a href="./product.html">Product</a>
-    <a class = "chosen_one" href="./news.html">News</a>
-    <a href="./testimonials.html">Testimonials</a>
-      <a href="./about_us.html">About us</a>
 
   </div>
   <div>
@@ -45,20 +40,29 @@
     <div class="centered">News</div>
     <a class ="reference1" href="#news_info"><br><br><br>What's new!</a>
   </div>
+
   <hr>
-  <h1 id="news_info">Bla bla bla</h1>
+  <h1 id="news_info">Latest news:</h1><br>
+  <div class = "date">12/04/22</div>
+  <div class="infoBox">✨✨Toxicity Detection Tool now on Twitter!✨✨</div><br><br>
+  <div class = "date">03/01/22</div>
+  <div class="infoBox">Our tool helps keep children's websites safe and sound!👶👶👶 Shout-out to Babybobo.com!</div><br><br>
+  <div class = "date">13/12/21</div>
+  <div class="infoBox">New member of our team is here. Please welcome 🔥<b>Marika!</b>🔥</div>
+  <hr>
 
-
-
-
-
-
-
-
-        <hr>
-
-        <script src="java.js"></script>  
-        
+     <!--Loading screen-->   
+     <div class='spinner-wrapper'>
+      <div class="spinner"></div>
+    </div>
+    <script>
+      let spinnerWrapper = document.querySelector('.spinner-wrapper');
+  
+      window.addEventListener('load', function () {
+          // spinnerWrapper.style.display = 'none';
+          spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+  </script>
 
         <script src="java.js"></script>     
 

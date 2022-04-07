@@ -18,11 +18,6 @@
                     
               </script>
 
-        <a href="./index.html">Toxicity Detection Tool</a>
-        <a href="./product.html">Product</a>
-        <a href="./news.html">News</a>
-        <a class = "chosen_one" href="./testimonials.html">Testimonials</a>
-        <a href="./about_us.html">About us</a>
 
       </div>
       <div>
@@ -49,5 +44,17 @@
         <h1 id="testimonials_info">Bla bla bla</h1>
         <script src="java.js"></script>
 
+             <!--Loading screen-->   
+    <div class='spinner-wrapper'>
+      <div class="spinner"></div>
+    </div>
+    <script>
+      let spinnerWrapper = document.querySelector('.spinner-wrapper');
+  
+      window.addEventListener('load', function () {
+          // spinnerWrapper.style.display = 'none';
+          spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+  </script>
     </body>
 </html>
