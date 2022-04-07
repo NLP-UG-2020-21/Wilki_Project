@@ -387,3 +387,23 @@ body {
       transform: rotate(360deg);
   }
 }
+
+/*Infobox*/
+.infoBox{
+  font-size: larger;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  border-radius: 25px;
+  margin: auto;
+  width: 70%;
+  border: 6px solid rgb(7, 133, 104);
+  padding: 10px;
+  }
+
+  .date {
+    font-size:small;
+    color: #555;
+    text-align: center;
+  }
+
+  
