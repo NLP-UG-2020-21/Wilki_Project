@@ -48,6 +48,11 @@
   height: auto;
 }
 
+.responsive{
+  width:100%;
+  height:auto;
+}
+
 .overlay {
   position: absolute;
   bottom: 100%;
@@ -113,6 +118,8 @@ div.pic4 {
 
 .main_title {
   text-shadow: 0 0 10px rgb(0, 0, 0);
+  margin:auto;
+
 }
 
 .reference1{
@@ -123,6 +130,7 @@ div.pic4 {
   color: rgb(255, 255, 255);
   font-size: 32px;
   font-family: 'Josefin Sans', sans-serif;
+  margin:auto;
 }
 
 .reference1:hover{
