@@ -114,7 +114,13 @@ div.pic4 {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
-  margin:auto;
+  margin-left: 60px;
+}
+
+#submitbutton {
+  margin-left: 18cm;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .main_title {
@@ -410,6 +416,17 @@ body {
   padding: 10px;
   }
 
+  .infoBox2{
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 25px;
+    margin: auto;
+    width: 70%;
+    border: 3px solid rgb(7, 133, 104);
+    padding: 10px;
+    }
+
   .date {
     font-size:small;
     color: #555;
@@ -425,9 +442,9 @@ body {
 
 #testimonials h5 {
   border: solid teal;
-  margin-left: 15px;
+  margin-left: 18cm;
   height: 31px;
-  width: 80px;
+  width: 90px;
   background-color: teal;
   border-radius: 25px;
   text-align: center;
@@ -435,9 +452,9 @@ body {
   color: white;
 }
 
-#score {
+/*#score {
   border: solid teal;
-  margin-left: 15px;
+  margin-left: 18cm;
   height: 70px;
   width: 150px;
   background-color: teal;
@@ -445,6 +462,5 @@ body {
   text-align: center;
   text-shadow: 0 0 5px #9fd3c7;
   color: white;
-}
+}*/
   
-
