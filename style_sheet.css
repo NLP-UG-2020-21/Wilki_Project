@@ -114,7 +114,13 @@ div.pic4 {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
-  margin:auto;
+  margin-left: 60px;
+}
+
+#submitbutton {
+  margin-left: 16cm;
+  margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .main_title {
