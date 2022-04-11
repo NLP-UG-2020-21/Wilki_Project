@@ -18,12 +18,6 @@
                     
         </script>
 
-        <a href="./index.html">Toxicity Detection Tool</a>
-        <a class = "chosen_one" href="./product.html">Product</a>
-        <a href="./news.html">News</a>
-        <a href="./testimonials.html">Testimonials</a>
-        <a href="./about_us.html">About us</a>
-
       </div>
       <div>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><b>↑</b></button>
@@ -44,8 +38,26 @@
             <a class ="reference1" href="#product_info"><br><br><br>Get to know our product!</a>
           </div>
         <hr>
-        <h1 id="product_info">Bla bla bla</h1>
-        <script src="java.js"></script>
+        <h1 id="product_info">How does it work?</h1><br>
+          <p> Our website is a free system for toxicity detection tool. The tool uses a Perspective API
+           which employs machine learning to identify "toxicity" in input texts. 
+           <br>The API uses machine learning models to score the toxicity of a sample text. <br><br> Tu będzie tutorial.</p>
 
+
+
+
+        <script src="java.js"></script>
+     <!--Loading screen-->   
+     <div class='spinner-wrapper'>
+      <div class="spinner"></div>
+    </div>
+    <script>
+      let spinnerWrapper = document.querySelector('.spinner-wrapper');
+  
+      window.addEventListener('load', function () {
+          // spinnerWrapper.style.display = 'none';
+          spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+  </script>
     </body>
 </html>
