@@ -437,3 +437,37 @@ body {
 /* DARK MODE koniec */
 
 
+<<<<<<< Updated upstream
+=======
+
+/* testimonials design */
+
+#testimonials p {
+  text-align: left;
+}
+
+#testimonials h5 {
+  border: solid teal;
+  margin-left: 15px;
+  height: 31px;
+  width: 80px;
+  background-color: teal;
+  border-radius: 25px;
+  text-align: center;
+  text-shadow: 0 0 5px #9fd3c7;
+  color: white;
+}
+
+#score {
+  border: solid teal;
+  margin-left: 15px;
+  height: 70px;
+  width: 150px;
+  background-color: teal;
+  border-radius: 25px;
+  text-align: center;
+  text-shadow: 0 0 5px #9fd3c7;
+  color: white;
+}
+  
+>>>>>>> Stashed changes
