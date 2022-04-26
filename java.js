@@ -37,4 +37,23 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
+let url_base = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=AIzaSyAxZz76Er85rbpcRZcSQFaZjX80c9c9Z8o"
+
+let example = {
+  comment: {text: "what kind of idiot name is foo?"},
+  languages: ["en"],
+  requestedAttributes: {TOXICITY:{}}
+};
+
+const fetchFromPerspective = async (obj) => {
+  fetch(url_base, {
+    data: JSON.stringify(obj),
+    mode: "no-cors"
+  })
+  .then(response => response.json())
+  .then(res => console.log(res));
+}
+
+fetchFromPerspective(example);
+
 
