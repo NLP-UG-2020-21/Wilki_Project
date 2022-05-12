@@ -347,6 +347,9 @@ body {
   color: white;
   border-radius: 12px;
 }
+
+.dark-mode img {
+  filter: brightness(40%);}
 /* DARK MODE koniec */
 
 /*textbox*/
