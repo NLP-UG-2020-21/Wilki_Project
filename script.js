@@ -1,6 +1,6 @@
 //Guzik do scroll up
 //Get the button:
-mybutton = document.getElementById("myBtn");
+const mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -32,28 +32,24 @@ for (i = 0; i < coll.length; i++) {
        content.style.maxHeight = null;
     } else {
        content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
 
-
-let url_base = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=AIzaSyAxZz76Er85rbpcRZcSQFaZjX80c9c9Z8o"
-
-let example = {
-  comment: {text: "what kind of idiot name is foo?"},
-  languages: ["en"],
-  requestedAttributes: {TOXICITY:{}}
-};
-
-const fetchFromPerspective = async (obj) => {
-  fetch(url_base, {
-    data: JSON.stringify(obj),
-    mode: "no-cors"
-  })
-  .then(response => response.json())
-  .then(res => console.log(res));
+const perspective_api_call = async(text_to_check) => {
+  const test = await axios({
+    url: "https://simple-perspective-client.herokuapp.com/persp",
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    data: {text: text_to_check}
+  });
+  console.log(test.data);
+  return test.data;
 }
 
-fetchFromPerspective(example);
-
-
+perspective_api_call("fuck you");
+perspective_api_call("you are a moron");
+perspective_api_call("don't you fuckin dare!!!");
