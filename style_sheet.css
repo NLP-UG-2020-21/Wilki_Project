@@ -119,6 +119,8 @@ div.pic4 {
 
 .main_title {
   text-shadow: 0 0 10px rgb(0, 0, 0);
+  width: 100%;
+  max-width: 1200px;
   margin:auto;
 
 }
@@ -278,21 +280,36 @@ h1 {
   color: white;
 }
 @media screen and (max-width:768px){
+  p{font-size:1.5em;
+} 
+}
+@media screen and (min-width:550px){
   p{font-size:1.5rem;
 } 
 }
+@media screen  and (max-width:768px){
+  h2{font-size:2em;
+  }
+}
+
+@media screen  and (min-width:550px){
+  h2{font-size:2.5em;
+  }
+}
 
 @media screen  and (max-width:768px){
   h2{font-size:2rem;
   }
 }
 
-
 @media screen  and (max-width:768px){
-  h2{font-size:2rem;
+  text{font-size:1.5em;
   }
 }
-
+@media screen  and (min-width:550px){
+  text{font-size:1.75rem;
+  }
+}
 /* BUTTONS DESIGN */
 .radious {
   background-color: teal;
