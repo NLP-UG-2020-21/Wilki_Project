@@ -36,7 +36,11 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-const perspective_api_call = async(text_to_check) => {
+//API//
+const perspective_api_call = async() => {
+  const text_to_check = document.getElementById("textBox").value;
+  const results_list = document.getElementById("results");
+  results_list.innerHTML = "";
   const test = await axios({
     url: "https://simple-perspective-client.herokuapp.com/persp",
     method: 'POST',
@@ -47,9 +51,18 @@ const perspective_api_call = async(text_to_check) => {
     data: {text: text_to_check}
   });
   console.log(test.data);
-  return test.data;
-}
 
-perspective_api_call("fuck you");
-perspective_api_call("you are a moron");
-perspective_api_call("don't you fuckin dare!!!");
+  results_list.append("Results: ");
+  
+  let toxicity_result = document.createElement("li");
+  let sexually_explicit_result = document.createElement("li");
+  let threat_result = document.createElement("li");
+
+  toxicity_result.textContent = `TOXICITY: ${test?.data?.attributeScores?.TOXICITY?.summaryScore?.value || `unknown`}`;
+  sexually_explicit_result.textContent = `SEXUAL HARRASEMENT: ${test?.data?.attributeScores?.SEXUALLY_EXPLICIT?.summaryScore?.value || `unknown`}`;
+  threat_result.textContent = `THREAT: ${test?.data?.attributeScores?.THREAT?.summaryScore?.value || `unknown`}`;
+ 
+  results_list.appendChild(toxicity_result);
+  results_list.appendChild(sexually_explicit_result);
+  results_list.appendChild(threat_result);
+}
