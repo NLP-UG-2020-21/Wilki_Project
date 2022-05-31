@@ -38,6 +38,7 @@ for (i = 0; i < coll.length; i++) {
 
 //API//
 const perspective_api_call = async() => {
+  console.log("HERE")
   const text_to_check = document.getElementById("textBox").value;
   const results_list = document.getElementById("results");
   results_list.innerHTML = "";
@@ -66,3 +67,8 @@ const perspective_api_call = async() => {
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
 }
+
+myForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  perspective_api_call();
+})
