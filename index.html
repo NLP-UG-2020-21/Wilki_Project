@@ -70,15 +70,15 @@
     <!--Box-->
     <h1></h1><label for="textbox">Try it out! Insert your text here:</label><br> </h1>
     <div id="box">
-      <form onsubmit="perspective_api_call()">
+      <form id="myForm">
         <br>
-
         <input type="text" id="textBox" />
         <input id='submitbutton' class='dark radious' type="submit" value="Submit" />
       </form>
-      <ul id="results">Results: </ul>
+      <ul id="results">Toxicity level: </ul>
+     <p>Negatively charged: </p>
+     <ul id="resultsK">Negatively charged: </ul>
   </div>
-
 
     </div>
      <!--Loading screen-->
@@ -97,32 +97,4 @@
   <script src="script.js"></script>
 
     </body>
-
-     <!--charts-->
-
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
-
 </html>
