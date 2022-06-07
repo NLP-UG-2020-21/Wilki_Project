@@ -66,7 +66,43 @@ const perspective_api_call = async() => {
   results_list.appendChild(toxicity_result);
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
-}
+
+  const chart_toxicity = toxicity_result;
+  const chart_sexually = sexually_explicit_result;
+  const chart_threat = threat_result;
+
+  const ctx = document.getElementById('myChart');
+  const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Toxicity', 'Sexual Harrasement', 'Threat', 'Negatively Charged'],
+          datasets: [{
+              label: '# of Votes',
+              data: [chart_toxicity, chart_sexually, chart_threat, 0.5],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+  }
 
 myForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -123,3 +159,38 @@ if (isNaN(resultsNeg)) {
 } else {
   document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
 };}
+
+
+
+// const ctx = document.getElementById('myChart');
+// const myChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ['Toxicity', 'Sexual Harrasement', 'Threat', 'Negatively Charged'],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [1,2,3,4],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255, 99, 132, 1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });
+
