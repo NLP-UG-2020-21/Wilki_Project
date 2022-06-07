@@ -67,7 +67,7 @@ const perspective_api_call = async() => {
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
 }
-
+const myForm = document.getElementById("myForm");
 myForm.addEventListener('submit', (e) => {
   e.preventDefault();
   perspective_api_call();
