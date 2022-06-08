@@ -317,6 +317,15 @@ h1 {
   text{font-size:1.75rem;
   }
 }
+
+@media screen  and (max-width:768px){
+  .centered{font-size:2em;
+  }
+}
+@media screen  and (min-width:550px){
+  .centered{font-size:1.75rem;
+  }
+}
 /* BUTTONS DESIGN */
 .radious {
   background-color: teal;
