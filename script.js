@@ -67,39 +67,31 @@ const perspective_api_call = async() => {
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
 
-  const chart_toxicity = toxicity_result;
-  const chart_sexually = sexually_explicit_result;
-  const chart_threat = threat_result;
 
   const ctx = document.getElementById('myChart');
   const myChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'pie',
       data: {
-          labels: ['Toxicity', 'Sexual Harrasement', 'Threat', 'Negatively Charged'],
+          labels: ['Toxicity', 'Sexual Harrasement', 'Threat'],
           datasets: [{
-              label: '# of Votes',
-              data: [chart_toxicity, chart_sexually, chart_threat, 0.5],
+              labels: '# of Votes',
+              data: [toxicity_result, sexually_explicit_result, threat_result],
               backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)'
+                  'rgba(0,128,128,0.4)',
+                  'rgba(0,128,128,0.6)',
+                  'rgba(0,128,128,0.8)'
               ],
               borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)'
+                  'rgba(0,128,128,0.4)',
+                  'rgba(0,128,128,0.6)',
+                  'rgba(0,128,128,0.8)'
               ],
               borderWidth: 1
           }]
       },
       options: {
-          scales: {
-              y: {
-                  beginAtZero: true
-              }
-          }
+          responsive: false
+          
       }
   });
   }
@@ -155,44 +147,43 @@ const length = arr1.length;
 console.log((occurances/length).toFixed(1)*100, "%");
 const resultsNeg = String((occurances/length).toFixed(1)*100);
 
+
 //jeśli brak inputu to wyświetla unknown
 if (isNaN(resultsNeg)) {
   document.getElementById("resultsK").innerHTML = "Unknown";
 } else {
   document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
-};}
+};
+
+const ctx = document.getElementById('pieChart');
+const pieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Negatively Charged'],
+        datasets: [{
+            labels: '# of Votes',
+            data: [resultsNeg, 100-resultsNeg],
+            backgroundColor: [
+                'rgba(0,128,128,0.4)',
+                'rgba(0,128,128,0.8)'
+            ],
+            borderColor: [
+                'rgba(0,128,128,0.4)',
+                'rgba(0,128,128,0.8)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: false
+        
+    }
+});
+
+}
 
 
 
-// const ctx = document.getElementById('myChart');
-// const myChart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//         labels: ['Toxicity', 'Sexual Harrasement', 'Threat', 'Negatively Charged'],
-//         datasets: [{
-//             label: '# of Votes',
-//             data: [1,2,3,4],
-//             backgroundColor: [
-//                 'rgba(255, 99, 132, 0.2)',
-//                 'rgba(54, 162, 235, 0.2)',
-//                 'rgba(255, 206, 86, 0.2)',
-//                 'rgba(75, 192, 192, 0.2)'
-//             ],
-//             borderColor: [
-//                 'rgba(255, 99, 132, 1)',
-//                 'rgba(54, 162, 235, 1)',
-//                 'rgba(255, 206, 86, 1)',
-//                 'rgba(75, 192, 192, 1)'
-//             ],
-//             borderWidth: 1
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             y: {
-//                 beginAtZero: true
-//             }
-//         }
-//     }
-// });
 
+
+     

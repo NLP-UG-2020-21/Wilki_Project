@@ -516,15 +516,11 @@ body {
   margin: 0 auto;
 }
 
-/*#score {
-  border: solid teal;
-  margin-left: 18cm;
-  height: 70px;
-  width: 150px;
-  background-color: teal;
-  border-radius: 25px;
-  text-align: center;
-  text-shadow: 0 0 5px #9fd3c7;
-  color: white;
-}*/
-  
+
+#myChart {
+  float: left;
+}
+
+#pieChart {
+  float: right;
+}
