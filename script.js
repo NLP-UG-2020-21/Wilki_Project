@@ -66,34 +66,6 @@ const perspective_api_call = async() => {
   results_list.appendChild(toxicity_result);
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
-
-
-  const ctx = document.getElementById('myChart');
-  const myChart = new Chart(ctx, {
-      type: 'pie',
-      data: {
-          labels: ['Toxicity', 'Sexual Harrasement', 'Threat'],
-          datasets: [{
-              labels: '# of Votes',
-              data: [toxicity_result, sexually_explicit_result, threat_result],
-              backgroundColor: [
-                  'rgba(0,128,128,0.4)',
-                  'rgba(0,128,128,0.6)',
-                  'rgba(0,128,128,0.8)'
-              ],
-              borderColor: [
-                  'rgba(0,128,128,0.4)',
-                  'rgba(0,128,128,0.6)',
-                  'rgba(0,128,128,0.8)'
-              ],
-              borderWidth: 1
-          }]
-      },
-      options: {
-          responsive: false
-          
-      }
-  });
   }
 
 myForm.addEventListener('submit', (e) => {
@@ -140,7 +112,7 @@ function add() {
   }
   
   const occurances = counts[1];
-  console.log(occurances);
+  //console.log(occurances);
 
 //liczę ile procent to słowa z listy
 const length = arr1.length;
@@ -155,29 +127,114 @@ if (isNaN(resultsNeg)) {
   document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
 };
 
+//WYKRESY//
+//toxicity//
+const ctx2 = document.getElementById('toxChart');
+const toxChart = new Chart(ctx2, {
+  type: 'pie',
+  data: {
+      labels: [" "],
+      datasets: [{
+          label: "Toxicity",
+          data: [10,0,100],
+          backgroundColor: [
+              'rgba(255, 99, 71, 0.5)',
+
+          ],
+          borderColor: [
+              'rgba(0,128,128,0.4)',
+
+          ],
+          borderWidth: 1
+      }]
+  },
+  options: {
+      responsive: false,
+}
+});
+//sh//
+const ctx3 = document.getElementById('sexChart');
+const sexChart = new Chart(ctx3, {
+  type: 'pie',
+  data: {
+      labels: [" "],
+      datasets: [{
+          label: "Sexual Harrasment",
+          data: [8,0,100],
+          backgroundColor: [
+              'rgba(236, 202, 71, 0.5)',
+
+          ],
+          borderColor: [
+              'rgba(0,128,128,0.4)',
+
+          ],
+          borderWidth: 1
+      }]
+  },
+  options: {
+      responsive: false,
+}
+});
+//threat//
+const ctx4 = document.getElementById('thrChart');
+const thrChart = new Chart(ctx4, {
+  type: 'pie',
+  data: {
+      labels: ["Threat"],
+      datasets: [{
+          label: "Threat",
+          data: [5,0,100],
+          backgroundColor: [
+              'rgba(164, 202, 71, 0.5)',
+
+
+          ],
+          borderColor: [
+              'rgba(0,128,128,0.4)',
+
+          ],
+          borderWidth: 3
+      }]
+  },
+  options: {
+      responsive: false,
+}
+});
+//negativity//
 const ctx = document.getElementById('pieChart');
 const pieChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
-        labels: ['Negatively Charged'],
+        labels: [" "],
         datasets: [{
-            labels: '# of Votes',
-            data: [resultsNeg, 100-resultsNeg],
+            label: "Negativity level",
+            data: [resultsNeg,0,100],
             backgroundColor: [
                 'rgba(0,128,128,0.4)',
-                'rgba(0,128,128,0.8)'
+
             ],
             borderColor: [
                 'rgba(0,128,128,0.4)',
-                'rgba(0,128,128,0.8)'
+
             ],
             borderWidth: 1
         }]
     },
     options: {
-        responsive: false
+        responsive: false,
+        scales: {
+          yAxes: [{
+            ticks: {
+                beginAtZero:false
+            },
+            scaleLabel: {
+                display: true,
+                labelString: 'Low → High'
+            }
+        }]
         
-    }
+    }}
 });
 
 }
