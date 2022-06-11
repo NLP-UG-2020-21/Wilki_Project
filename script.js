@@ -67,6 +67,7 @@ const perspective_api_call = async() => {
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
 
+<<<<<<< Updated upstream
 
   const ctx = document.getElementById('myChart');
   const myChart = new Chart(ctx, {
@@ -94,6 +95,89 @@ const perspective_api_call = async() => {
           
       }
   });
+=======
+  var toxnum = Number(toxicity_result.textContent);
+  var sexnum = Number(sexually_explicit_result.textContent);
+  var thrnum = Number(threat_result.textContent);
+
+  //wykresy//
+  //toxicity//
+const ctx2 = document.getElementById('toxChart');
+const toxChart = new Chart(ctx2, {
+  type: 'pie',
+  data: {
+      labels: ["Toxicity level (%)"],
+      datasets: [{
+          label: "Toxicity",
+          data: [toxnum*100,100-toxnum*100],
+          backgroundColor: [
+            'rgba(0,128,128,1)',
+              'rgba(0,128,128,0.7)',
+
+          ],
+          borderColor: [
+            'rgba(0,128,128,0.4)',
+
+          ],
+          borderWidth: 0
+      }]
+  },
+  options: {
+      responsive: false,
+}
+});
+const ctx3 = document.getElementById('sexChart');
+const sexChart = new Chart(ctx3, {
+  type: 'pie',
+  data: {
+      labels: ["Sexual Harrasment level"],
+      datasets: [{
+          label: "Sexual Harrasment",
+          data: [sexnum*100,100-sexnum*100],
+          backgroundColor: [
+            "rgba(0,128,128,0.9)",
+            'rgba(0,128,128,0.6)',
+
+
+          ],
+          borderColor: [
+              'rgba(0,128,128,0.4)',
+
+          ],
+          borderWidth: 0
+      }]
+  },
+  options: {
+      responsive: false,
+}
+});
+//threat//
+const ctx4 = document.getElementById('thrChart');
+const thrChart = new Chart(ctx4, {
+  type: 'pie',
+  data: {
+      labels: ["Threat level (%)"],
+      datasets: [{
+          label: "Threat",
+          data: [thrnum*100,100-thrnum*100],
+          backgroundColor: [
+            'rgba(0,128,128,0.8)',
+              'rgba(0,128,128,0.4)',
+
+
+          ],
+          borderColor: [
+              'rgba(0,128,128,0.4)',
+
+          ],
+          borderWidth: 0
+      }]
+  },
+  options: {
+      responsive: false,
+}
+});
+>>>>>>> Stashed changes
   }
 
 myForm.addEventListener('submit', (e) => {
@@ -153,7 +237,13 @@ if (isNaN(resultsNeg)) {
   document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
 };
 
+<<<<<<< Updated upstream
 const ctx = document.getElementById('pieChart');
+=======
+//WYKRESY//
+//negativity//
+const ctx = document.getElementById('negChart');
+>>>>>>> Stashed changes
 const pieChart = new Chart(ctx, {
     type: 'pie',
     data: {
@@ -166,10 +256,15 @@ const pieChart = new Chart(ctx, {
                 'rgba(0,128,128,0.8)'
             ],
             borderColor: [
+<<<<<<< Updated upstream
                 'rgba(0,128,128,0.4)',
                 'rgba(0,128,128,0.8)'
+=======
+                'rgba(0,128,128,0.8)',
+
+>>>>>>> Stashed changes
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {

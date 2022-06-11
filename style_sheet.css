@@ -60,9 +60,10 @@
   right: 0;
   background-color: rgb(5, 83, 83);
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   height: 0;
   transition: .5s ease;
+  margin-left: 65px;
 }
 
 .cool_photo:hover .overlay {
@@ -101,8 +102,39 @@ div.pic4 {
 }
 /* Powyżej są obrazki z tekstem do about me */
 
+<<<<<<< Updated upstream
 
 #textbox {
+=======
+#textBox {
+width: 80%;
+vertical-align: text-top;
+background-color:rgb(232, 240, 254);
+  height:200px;
+  font-size:large;
+  color: #000000;
+  margin: 0 auto;
+  padding-bottom: 175px;
+
+  position:relative; left:10%;
+}
+  #textBox input {
+    background-color:rgb(232, 240, 254);
+    vertical-align: text-top;
+    color: #000000;
+   }
+   .dark-mode #textBox {
+    width: 80%;
+    vertical-align: text-top;
+    background-color:rgb(115, 121, 131);
+      height:200px;
+      font-size:large;
+      color: #F3F3F3;
+      margin: 0 auto;
+      padding-bottom: 175px;}
+
+/*#textbox {
+>>>>>>> Stashed changes
   width: 130px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -184,6 +216,7 @@ h1 {
   text-align: center;
   text-shadow: 0 0 5px rgb(87, 86, 86);
 }
+
 
   h2 {
     font-family: 'Josefin Sans', sans-serif;
@@ -352,13 +385,6 @@ body {
   color: white;
 }
 
-
-.dark-mode #textbox {
-  background-color: black;
-  color: white;
-  text-align: justify;
-}
-
 .dark-mode .dark {
   background-color:teal;
   color: white;
@@ -465,7 +491,7 @@ body {
   border: solid teal;
   margin-left: 18cm;
   height: 31px;
-  width: 90px;
+  width: 110px;
   background-color: teal;
   border-radius: 25px;
   text-align: center;
@@ -474,10 +500,22 @@ body {
 }
 
 
-#myChart {
+#toxChart {
   float: left;
 }
 
-#pieChart {
+#sexChart {
+  float: left;
+  margin-left: 40px;
+}
+
+#thrChart {
   float: right;
 }
+
+#negChart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
