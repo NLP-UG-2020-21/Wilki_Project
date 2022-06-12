@@ -66,9 +66,11 @@ const perspective_api_call = async() => {
   results_list.appendChild(sexually_explicit_result);
   results_list.appendChild(threat_result);
 
+
   var toxnum = Number(toxicity_result.textContent);
   var sexnum = Number(sexually_explicit_result.textContent);
   var thrnum = Number(threat_result.textContent);
+
 
   //wykresy//
   //toxicity//
@@ -81,15 +83,18 @@ const toxChart = new Chart(ctx2, {
           label: "Toxicity",
           data: [toxnum*100,100-toxnum*100],
           backgroundColor: [
-            'rgba(255, 99, 71, 1)',
-              'rgba(0, 0, 0, 0.1)',
+            'rgba(0,128,128,1)',
+            'rgba(0,128,128,0.7)',
+
 
           ],
           borderColor: [
             'rgba(0,128,128,0.4)',
 
           ],
-          borderWidth: 3
+
+          borderWidth: 0
+
       }]
   },
   options: {
@@ -105,8 +110,9 @@ const sexChart = new Chart(ctx3, {
           label: "Sexual Harrasment",
           data: [sexnum*100,100-sexnum*100],
           backgroundColor: [
-            "rgba(215, 179, 0, 0.5)",
-            'rgba(0, 0, 0, 0.1)',
+            "rgba(0,128,128,0.9)",
+            'rgba(0,128,128,0.6)',
+
 
 
           ],
@@ -114,7 +120,9 @@ const sexChart = new Chart(ctx3, {
               'rgba(0,128,128,0.4)',
 
           ],
-          borderWidth: 3
+
+          borderWidth: 0
+
       }]
   },
   options: {
@@ -131,8 +139,9 @@ const thrChart = new Chart(ctx4, {
           label: "Threat",
           data: [thrnum*100,100-thrnum*100],
           backgroundColor: [
-            'rgba(0, 122, 255, 0.5)',
-              'rgba(0, 0, 0, 0.1)',
+
+            'rgba(0,128,128,0.8)',
+            'rgba(0,128,128,0.4)',
 
 
           ],
@@ -140,13 +149,16 @@ const thrChart = new Chart(ctx4, {
               'rgba(0,128,128,0.4)',
 
           ],
-          borderWidth: 3
+
+          borderWidth: 0
+
       }]
   },
   options: {
       responsive: false,
 }
 });
+
   }
 
 
@@ -210,9 +222,10 @@ if (isNaN(resultsNeg)) {
   document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
 };
 
+
 //WYKRESY//
 //negativity//
-const ctx = document.getElementById('pieChart');
+const ctx = document.getElementById('negChart');
 const pieChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -225,10 +238,11 @@ const pieChart = new Chart(ctx, {
 
             ],
             borderColor: [
-                'rgba(0,128,128,0.4)',
+
+                'rgba(0,128,128,0.8)',
 
             ],
-            borderWidth: 1
+            borderWidth: 2
         }]
     },
     options: {
