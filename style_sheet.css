@@ -169,7 +169,7 @@ background-color:rgb(232, 240, 254);
 .main_title {
   text-shadow: 0 0 10px rgb(0, 0, 0);
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin:auto;
 
 }
