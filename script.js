@@ -52,7 +52,7 @@ const perspective_api_call = async() => {
   });
   console.log(test.data);
 
-  results_list.append("Toxicity level: ");
+  results_list.append();
   
   let toxicity_result = document.createElement("li");
   let sexually_explicit_result = document.createElement("li");
@@ -62,9 +62,9 @@ const perspective_api_call = async() => {
   sexually_explicit_result.textContent = test?.data?.attributeScores?.SEXUALLY_EXPLICIT?.summaryScore?.value || `unknown`;
   threat_result.textContent = test?.data?.attributeScores?.THREAT?.summaryScore?.value || `unknown`;
  
-  results_list.appendChild(toxicity_result);
-  results_list.appendChild(sexually_explicit_result);
-  results_list.appendChild(threat_result);
+ // results_list.appendChild(toxicity_result);
+ // results_list.appendChild(sexually_explicit_result);
+  //results_list.appendChild(threat_result);
 
 
   var toxnum = Number(toxicity_result.textContent);
@@ -105,7 +105,7 @@ const ctx3 = document.getElementById('sexChart');
 const sexChart = new Chart(ctx3, {
   type: 'pie',
   data: {
-      labels: ["Sexual Harrasment level"],
+      labels: ["Sexual Harrasment level (%)"],
       datasets: [{
           label: "Sexual Harrasment",
           data: [sexnum*100,100-sexnum*100],
@@ -216,11 +216,11 @@ const resultsNeg = String((occurances/length).toFixed(1)*100);
 
 
 //jeśli brak inputu to wyświetla unknown
-if (isNaN(resultsNeg)) {
-  document.getElementById("resultsK").innerHTML = "Unknown";
-} else {
-  document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
-};
+//if (isNaN(resultsNeg)) {
+//  document.getElementById("resultsK").innerHTML = "Unknown";
+//} else {
+///  document.getElementById("resultsK").innerHTML = (resultsNeg +  "%");
+//};
 
 
 //WYKRESY//
@@ -231,7 +231,7 @@ const pieChart = new Chart(ctx, {
     data: {
         labels: [" "],
         datasets: [{
-            label: "Negativity level",
+            label: "Negativity level (%)",
             data: [resultsNeg,0,100],
             backgroundColor: [
                 'rgba(0,128,128,0.4)',
